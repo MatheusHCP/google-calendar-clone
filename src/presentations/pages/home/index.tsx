@@ -13,7 +13,7 @@ export default function Home(){
   },[])
 
   return (
-    <div className='bg-slate-500 h-screen flex flex-col'>
+    <div className='h-screen flex flex-col'>
       <CalendarHeader/>
       <div className="flex flex-1">
         <Sidebar/>
