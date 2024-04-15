@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { getMonth } from '../../utils';
 import CalendarHeader from '../../components/calendar-header';
 import Sidebar from '../../components/sidebar';
@@ -9,7 +9,7 @@ export default function Home(){
 
   const [currentMonth, setCurrentMonth] = useState(getMonth());
 
-  const {monthIndex, setMonthIndex} = useCalendarContext()
+  const {monthIndex} = useCalendarContext()
 
   useEffect(() => {
     setCurrentMonth(getMonth(monthIndex))
