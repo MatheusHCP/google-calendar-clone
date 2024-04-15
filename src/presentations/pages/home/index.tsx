@@ -3,14 +3,19 @@ import { getMonth } from '../../utils';
 import CalendarHeader from '../../components/calendar-header';
 import Sidebar from '../../components/sidebar';
 import Month from '../../components/month';
+import useCalendarContext from '../../hooks/useCalendarContext';
 
 export default function Home(){
 
   const [currentMonth, setCurrentMonth] = useState(getMonth());
 
+  const {monthIndex, setMonthIndex} = useCalendarContext()
+
   useEffect(() => {
-    console.log(getMonth())
-  },[])
+    setCurrentMonth(getMonth(monthIndex))
+  },[monthIndex])
+
+
 
   return (
     <div className='h-screen flex flex-col'>
